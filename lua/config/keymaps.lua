@@ -18,8 +18,8 @@ local Util = require("lazyvim.util")
 -- DONE: lsp, saga, previews
 -- DONE: chatgtp
 -- DONE: test runner
+-- DONE: window maximizer (leader m)
 -- tmux plugin - to, say, open terminal pane temporarily next to nvim window
--- window maximizer (leader m)
 -- git blame
 
 -- Deleting keymaps I do not like
@@ -81,31 +81,5 @@ keymap.set("n", "<leader>r", "<Plug>ReplaceWithRegisterOperator", opts)
 -- Missing vim-surround keymap
 keymap.set("x", "S", "<Plug>VSurround", opts)
 
--- " Tabs
---
--- " Open current directory
--- nmap te :tabedit
--- nmap <S-Tab> :tabprev<Return>
--- nmap <Tab> :tabnext<Return>
---
 -- " Run command promt with Vimux in a small horizontal split
 -- nmap <leader>C :VimuxPromptCommand<CR>
---
--- " Lspsaga finder
--- nnoremap gh :Lspsaga lsp_finder<CR>
--- nnoremap gp :Lspsaga peek_definition<CR>
---
---
--- " Search for selected text, forwards or backwards.
--- vnoremap <silent> * :<C-U>
---   \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
---   \gvy/<C-R><C-R>=substitute(
---   \escape(@", '/\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
---   \gV:call setreg('"', old_reg, old_regtype)<CR>
--- vnoremap <silent> # :<C-U>
---   \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
---   \gvy?<C-R><C-R>=substitute(
---   \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
---   \gV:call setreg('"', old_reg, old_regtype)<CR>
---
--- "-----------------------------
