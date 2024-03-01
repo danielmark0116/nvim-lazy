@@ -12,9 +12,9 @@ local Util = require("lazyvim.util")
 -- DONE: which key for file search, live grep, search current word
 -- DONE: replace in work / selection etc
 -- DONE: surround
--- DONE: easymotion
+-- DONE: easymotion - replaced with flash
+-- DONE: copilot
 -- lsp, saga, previews
--- copilot
 -- suggestions change on tab!
 -- chatgtp
 -- tmux plugin - to, say, open terminal pane temporarily next to nvim window
