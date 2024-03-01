@@ -3,6 +3,10 @@
 My config based on a starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
 Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
 
+## Requirements:
+
+- gnu-sed to be installed with brew
+
 ## Multiple configs for NVIM
 
 1. Tweak your .zshrc with `nvms` alias

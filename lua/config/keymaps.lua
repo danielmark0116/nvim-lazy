@@ -4,6 +4,21 @@
 -- Options
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
+local Util = require("lazyvim.util")
+
+-- TODO:
+-- DONE: colorscheme - catpuccino try it out
+-- which key for github
+-- which key for file search, live grep, search current word
+-- replace in work / selection etc
+-- surround
+-- lsp, saga, previews
+-- copilot
+-- chatgtp
+-- tmux plugin - to, say, open terminal pane temporarily next to nvim window
+-- test runner
+-- window maximizer (leader m)
+-- git blame
 
 -- Deleting keymaps I do not like
 keymap.del("n", "<leader>ww")
@@ -12,6 +27,9 @@ keymap.del("n", "<leader>w-")
 keymap.del("n", "<leader>w|")
 keymap.del("n", "<leader>ge")
 keymap.del("n", "s") -- easy-motion-like plug, I prefer easymotion itself
+keymap.del("n", "<leader>gg")
+keymap.del("n", "<leader>gG")
+keymap.del("n", "<leader>gc")
 
 -- Undo / write
 keymap.set("n", "<leader>u", ":undo<CR>", opts)
@@ -21,8 +39,8 @@ keymap.set("n", "<leader>w", ":w<CR>", opts)
 keymap.set("i", "jk", "<ESC>", opts)
 
 -- Goto line
-keymap.set("n", "<leader>l", "$", opts)
-keymap.set("n", "<leader>h", "^", opts)
+keymap.set({ "n", "v" }, "<leader>l", "$", opts)
+keymap.set({ "n", "v" }, "<leader>h", "^", opts)
 
 -- Select all
 keymap.set("n", "<C-a>", "gg<S-v>G", opts)
@@ -50,16 +68,16 @@ keymap.set("n", "<leader>bl", ":bnext<Return>", opts)
 keymap.set("n", "<leader>bh", ":bprev<Return>", opts)
 keymap.set("n", "<leader>bc", ":bdelete<Return>", opts)
 
+keymap.set("n", "<leader>g", function()
+  Util.terminal({ "lazygit" }, { cwd = Util.root(), esc_esc = false, ctrl_hjkl = false })
+end, opts)
+
 -- " Tabs
 --
 -- " Open current directory
 -- nmap te :tabedit
 -- nmap <S-Tab> :tabprev<Return>
 -- nmap <Tab> :tabnext<Return>
-
--- " NERDTree
--- nnoremap <leader>e :NERDTreeToggle<CR>
--- nnoremap <leader>ef :NERDTreeFind<CR>
 --
 -- " Run command promt with Vimux in a small horizontal split
 -- nmap <leader>C :VimuxPromptCommand<CR>
