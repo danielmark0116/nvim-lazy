@@ -10,10 +10,12 @@ local Util = require("lazyvim.util")
 -- DONE: colorscheme - catpuccino try it out
 -- DONE: which key for github
 -- DONE: which key for file search, live grep, search current word
--- replace in work / selection etc
--- surround
+-- DONE: replace in work / selection etc
+-- DONE: surround
+-- DONE: easymotion
 -- lsp, saga, previews
 -- copilot
+-- suggestions change on tab!
 -- chatgtp
 -- tmux plugin - to, say, open terminal pane temporarily next to nvim window
 -- test runner
