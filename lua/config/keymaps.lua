@@ -8,7 +8,7 @@ local Util = require("lazyvim.util")
 
 -- TODO:
 -- DONE: colorscheme - catpuccino try it out
--- which key for github
+-- DONE: which key for github
 -- which key for file search, live grep, search current word
 -- replace in work / selection etc
 -- surround
@@ -26,10 +26,8 @@ keymap.del("n", "<leader>wd")
 keymap.del("n", "<leader>w-")
 keymap.del("n", "<leader>w|")
 keymap.del("n", "<leader>ge")
-keymap.del("n", "s") -- easy-motion-like plug, I prefer easymotion itself
-keymap.del("n", "<leader>gg")
+keymap.del("n", "s")
 keymap.del("n", "<leader>gG")
-keymap.del("n", "<leader>gc")
 
 -- Undo / write
 keymap.set("n", "<leader>u", ":undo<CR>", opts)
@@ -68,6 +66,7 @@ keymap.set("n", "<leader>bl", ":bnext<Return>", opts)
 keymap.set("n", "<leader>bh", ":bprev<Return>", opts)
 keymap.set("n", "<leader>bc", ":bdelete<Return>", opts)
 
+-- LazyGIT
 keymap.set("n", "<leader>g", function()
   Util.terminal({ "lazygit" }, { cwd = Util.root(), esc_esc = false, ctrl_hjkl = false })
 end, opts)
