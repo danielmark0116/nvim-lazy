@@ -15,10 +15,10 @@ local Util = require("lazyvim.util")
 -- DONE: easymotion - replaced with flash
 -- DONE: copilot
 -- DONE: suggestions change on tab!
--- lsp, saga, previews
--- chatgtp
+-- DONE: lsp, saga, previews
+-- DONE: chatgtp
+-- DONE: test runner
 -- tmux plugin - to, say, open terminal pane temporarily next to nvim window
--- test runner
 -- window maximizer (leader m)
 -- git blame
 
@@ -42,6 +42,7 @@ keymap.set("i", "jk", "<ESC>", opts)
 -- Goto line
 keymap.set({ "n", "v" }, "<leader>l", "$", opts)
 keymap.set({ "n", "v" }, "<leader>h", "^", opts)
+keymap.set("n", "gh", "<cmd>Telescope lsp_references<cr>", opts)
 
 -- Select all
 keymap.set("n", "<C-a>", "gg<S-v>G", opts)
