@@ -14,8 +14,8 @@ local Util = require("lazyvim.util")
 -- DONE: surround
 -- DONE: easymotion - replaced with flash
 -- DONE: copilot
+-- DONE: suggestions change on tab!
 -- lsp, saga, previews
--- suggestions change on tab!
 -- chatgtp
 -- tmux plugin - to, say, open terminal pane temporarily next to nvim window
 -- test runner
