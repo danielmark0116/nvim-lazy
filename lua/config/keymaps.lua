@@ -26,7 +26,8 @@ keymap.del("n", "<leader>wd")
 keymap.del("n", "<leader>w-")
 keymap.del("n", "<leader>w|")
 keymap.del("n", "<leader>ge")
-keymap.del("n", "s")
+keymap.del({ "n", "v" }, "s")
+keymap.del({ "n", "v" }, "S")
 keymap.del("n", "<leader>gG")
 
 -- Undo / write
@@ -73,6 +74,9 @@ end, opts)
 
 -- Replace with register
 keymap.set("n", "<leader>r", "<Plug>ReplaceWithRegisterOperator", opts)
+
+-- Missing vim-surround keymap
+keymap.set("x", "S", "<Plug>VSurround", opts)
 
 -- " Tabs
 --
