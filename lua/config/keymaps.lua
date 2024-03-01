@@ -9,7 +9,7 @@ local Util = require("lazyvim.util")
 -- TODO:
 -- DONE: colorscheme - catpuccino try it out
 -- DONE: which key for github
--- which key for file search, live grep, search current word
+-- DONE: which key for file search, live grep, search current word
 -- replace in work / selection etc
 -- surround
 -- lsp, saga, previews
@@ -70,6 +70,9 @@ keymap.set("n", "<leader>bc", ":bdelete<Return>", opts)
 keymap.set("n", "<leader>g", function()
   Util.terminal({ "lazygit" }, { cwd = Util.root(), esc_esc = false, ctrl_hjkl = false })
 end, opts)
+
+-- Replace with register
+keymap.set("n", "<leader>r", "<Plug>ReplaceWithRegisterOperator", opts)
 
 -- " Tabs
 --
