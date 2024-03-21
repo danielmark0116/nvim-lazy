@@ -1,9 +1,10 @@
 return {
-  { "Mofiqul/dracula.nvim", enabled = false },
+  { "Mofiqul/dracula.nvim", enabled = true },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      -- colorscheme = "catppuccin",
+      colorscheme = "dracula",
     },
   },
 }

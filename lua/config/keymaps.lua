@@ -45,7 +45,7 @@ keymap.set({ "n", "v" }, "<leader>h", "^", opts)
 keymap.set("n", "gh", "<cmd>Telescope lsp_references<cr>", opts)
 
 -- Select all
-keymap.set("n", "<C-a>", "gg<S-v>G", opts)
+keymap.set("n", "<C-a>a", "gg<S-v>G", opts)
 
 -- Window/splits management
 keymap.set("n", "ss", ":split<Return><C-w>j", opts)
