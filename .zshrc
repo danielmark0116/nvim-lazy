@@ -137,7 +137,7 @@ export PATH=$PATH:~/.local/bin
 export ANDROID_NDK_HOME=$HOME/Library/Android/sdk/ndk
 export NDK_HOME=$HOME/Library/Android/sdk/ndk
 
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+# export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
 alias setJDK8='unset JAVA_HOME;export JAVA_HOME=`/usr/libexec/java_home -v 1.8`'
 alias setJDK11='unset JAVA_HOME;export JAVA_HOME=`/usr/libexec/java_home -v 11`'
@@ -168,6 +168,7 @@ eval "$(pyenv init -)"
 
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
+export JAVA_HOME=$(jenv javahome)
 
 # Handling pupetter installation on arm
 export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
