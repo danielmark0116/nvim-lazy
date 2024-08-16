@@ -6,6 +6,7 @@ return {
     require("chatgpt").setup({
       openai_params = {
         model = "gpt-4",
+        max_tokens = 4095,
       },
     })
   end,

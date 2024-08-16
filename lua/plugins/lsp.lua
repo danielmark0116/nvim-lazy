@@ -3,6 +3,7 @@ return {
   opts = {
     servers = {
       eslint = {},
+      -- kotlin_language_server = {},
       sourcekit = {
         cmd = {
           "/Applications/Xcode-15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp",
@@ -10,6 +11,9 @@ return {
       },
     },
     setup = {
+      -- kotlin_language_server = function()
+      --   return true -- avoid duplicate servers
+      -- end,
       eslint = function()
         require("lazyvim.util").lsp.on_attach(function(client)
           if client.name == "eslint" then
