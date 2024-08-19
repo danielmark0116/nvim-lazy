@@ -3,6 +3,7 @@ return {
   opts = {
     servers = {
       eslint = {},
+      biome = {},
       -- kotlin_language_server = {},
       sourcekit = {
         cmd = {
