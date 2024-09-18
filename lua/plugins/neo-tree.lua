@@ -40,6 +40,8 @@ return {
     },
     window = {
       mappings = {
+        ["l"] = "open",
+        ["h"] = "close_node",
         ["<space>"] = "none",
         ["s"] = "none",
         ["ss"] = "open_vsplit",
