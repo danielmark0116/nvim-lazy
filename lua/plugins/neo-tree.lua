@@ -11,7 +11,7 @@ return {
     {
       "<leader>e",
       function()
-        require("neo-tree.command").execute({ toggle = true, dir = vim.loop.cwd() })
+        require("neo-tree.command").execute({ toggle = true, dir = vim.loop.cwd(), position = "current" })
       end,
       desc = "Explorer NeoTree (root dir)",
       remap = true,
@@ -36,6 +36,7 @@ return {
       bind_to_cwd = false,
       follow_current_file = { enabled = true },
       use_libuv_file_watcher = true,
+      hijack_netrw_behavior = "open_current",
     },
     window = {
       mappings = {
