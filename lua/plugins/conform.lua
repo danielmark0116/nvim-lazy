@@ -65,6 +65,7 @@ return {
         result["fish"] = { "fish_indent" }
         result["sh"] = { "shfmt" }
         result["swift"] = { "swiftformat" }
+        result["gdscript"] = { "gdformat" }
 
         return result
       end)(),
