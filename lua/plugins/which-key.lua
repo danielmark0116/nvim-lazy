@@ -35,6 +35,7 @@ return {
       ["<leader>q"] = { name = "+quit/session" },
       ["<leader>g"] = { name = "+git" },
       ["<leader>s"] = { name = "+search" },
+      ["<leader>sf"] = { "<cmd>AerialToggle!<CR>", "Aerial - symbols" },
       ["<leader>u"] = { name = "+ui" },
       ["<leader>w"] = { name = "+windows" },
       ["<leader>x"] = { name = "+diagnostics/quickfix" },
