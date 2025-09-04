@@ -7,7 +7,7 @@ return {
       -- kotlin_language_server = {},
       sourcekit = {
         cmd = {
-          "/Applications/Xcode-15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp",
+          "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp",
         },
       },
       gdscript = {
