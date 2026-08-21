@@ -174,8 +174,6 @@ export JAVA_HOME=$(jenv javahome)
 export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 export PUPPETEER_EXECUTABLE_PATH=`which chromium`
 
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
-
 alias git='LANG=en_GB git'
 
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
@@ -213,3 +211,5 @@ esac
 # flashlight
 export PATH="/Users/danielgrychtol/.flashlight/bin:$PATH"
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+. $(brew --prefix asdf)/libexec/asdf.sh
