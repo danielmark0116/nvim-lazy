@@ -9,6 +9,7 @@ return {
       "stylua",
       "shfmt",
       "biome",
+      "clang-format",
     },
   },
   ---@param opts MasonSettings | {ensure_installed: string[]}

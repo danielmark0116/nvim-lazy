@@ -66,6 +66,10 @@ return {
         result["sh"] = { "shfmt" }
         result["swift"] = { "swiftformat" }
         result["gdscript"] = { "gdformat" }
+        result["c"] = { "clang-format" }
+        result["cpp"] = { "clang-format" }
+        result["objc"] = { "clang-format" }
+        result["objcpp"] = { "clang-format" }
 
         return result
       end)(),
